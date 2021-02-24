@@ -61,12 +61,12 @@ const App: React.FC<Props> = () => {
             <div className="flex-auto overflow-y-auto p-5 space-y-4"
               style={{'backgroundImage': "url(https://static.intercomassets.com/ember/assets/images/messenger-backgrounds/background-1-99a36524645be823aabcd0e673cb47f8.png)"}}>
                 {Array(10).fill(0).map((value, index) => 
-                  <div key={index.toString()} className="flex flex-row space-x-2">
+                  <div key={index.toString()} className={index % 2 === 0 ? "flex flex-row space-x-2" : "flex space-x-2 flex-row-reverse space-x-reverse"}>
                     <svg className="flex-none w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div className="flex flex-col">
-                      <div className="bg-gray-200 rounded p-5">Some message text</div>
+                      <div className={index % 2 === 0 ? "bg-gray-200 rounded p-5" : "bg-blue-100 rounded p-5"} >Some message text</div>
                       <div className="test-sm text-gray-500">5hr ago</div>
                     </div>
                   </div>
