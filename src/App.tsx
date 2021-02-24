@@ -59,7 +59,9 @@ const App: React.FC<Props> = () => {
               </div>
             </div>
             <div className="flex-auto overflow-y-auto bg-green-200">a</div>
-            <div className="flex-none h-40 bg-blue-200">a</div>
+            <div className="flex-none h-40 p-4">
+              <textarea className="w-full h-full outline-none border focus:border-blue-600 hover:border-blue-400 rounded shadow-lg">Hi</textarea>
+            </div>
           </div>
           <div className="w-1/5 overflow-y-auto flex flex-col bg-gray-200">
             <div className="h-64 flex-none border-b border-gray-400">
