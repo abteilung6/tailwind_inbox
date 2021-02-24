@@ -47,7 +47,16 @@ const App: React.FC<Props> = () => {
             </div>
           </div>
           <div className="w-3/5 border-l border-r border-gray-400">center</div>
-          <div className="w-1/5 bg-gray-200">right</div>
+          <div className="w-1/5 overflow-y-auto flex flex-col bg-gray-200">
+            <div className="h-64 flex-none border-b border-gray-400">
+              ..
+            </div>
+            <div className="flex flex-col space-y-4 p-4">
+              {["a", "b", "c"].map((value, index) => 
+                <div className="flex-none h-64 bg-white border rounded">{value}</div>
+              )} 
+            </div>
+          </div>
         </div>
     </div>
   );
