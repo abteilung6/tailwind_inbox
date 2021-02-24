@@ -46,7 +46,11 @@ const App: React.FC<Props> = () => {
                 </a>)}
             </div>
           </div>
-          <div className="w-3/5 border-l border-r border-gray-400">center</div>
+          <div className="w-3/5 flex flex-col border-l border-r border-gray-400">
+            <div className="flex-none h-16 bg-red-200">a</div>
+            <div className="flex-auto overflow-y-auto bg-green-200">a</div>
+            <div className="flex-none h-40 bg-blue-200">a</div>
+          </div>
           <div className="w-1/5 overflow-y-auto flex flex-col bg-gray-200">
             <div className="h-64 flex-none border-b border-gray-400">
               ..
